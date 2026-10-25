@@ -1,0 +1,49 @@
+{
+  "version": "2026-10-22-sneaky",
+  "video": "assets/portnoy-loop.mp4",
+  "duration": 65,
+  "dark": true,
+  "particles": 100,
+  "letters": {
+    "size": 110,
+    "width": 100,
+    "spacing": 100
+  },
+  "mask": {
+    "radius": 0.7,
+    "feather": 0.85,
+    "pinned": false
+  },
+  "focus": {
+    "mode": "hunt",
+    "strength": 0.7,
+    "settle": 0.22,
+    "delay": 0.1,
+    "duration": 1.3,
+    "passes": 2,
+    "period": 4,
+    "manual": 2,
+    "center": 0.31,
+    "edge": 2.4
+  },
+  "reticle": {
+    "style": "corners",
+    "opacity": 0.4,
+    "color": true
+  },
+  "videoFrame": {
+    "width": 1920,
+    "height": 1080,
+    "word": [
+      73,
+      384,
+      1774,
+      311
+    ],
+    "scale": 1.1
+  },
+  "videoResolution": [
+    3840,
+    2160
+  ]
+}

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow"><title>Частицы · Portnoy Production</title><meta name="description" content="Portnoy Production — производство видео, трансляций, графики и событий.">
+<link rel="icon" href="assets/head.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css?v=release-sneaky-20261022"><link rel="stylesheet" href="focus-reticle.css?v=release-sneaky-20261022">
+<style>#playback-message{position:fixed;bottom:24px;left:20px;right:20px;text-align:center;color:#bbb;font:13px Arial;pointer-events:none}#stage:focus{outline:none}</style>
+<link rel="stylesheet" href="contact-preview.css?v=release-sneaky-20261022">
+</head><body class="dark" data-cursor="corners-soft">
+<main id="stage" tabindex="0" aria-label="Portnoy Production — интерактивная надпись">
+<h1 class="sr-only">Portnoy Production</h1><img class="fallback-word" src="assets/wordmark-top.svg" alt="" aria-hidden="true"><canvas id="scene" aria-hidden="true"></canvas>
+</main>
+<div id="focus-reticle" class="focus-reticle" aria-hidden="true" data-style="corners"><svg viewBox="0 0 100 100"><path class="corners" d="M12 32V12H32 M68 12H88V32 M88 68V88H68 M32 88H12V68"/></svg></div>
+
+<div class="particle-toolbar"><a href="index.html">Готовая страница ↗</a><button id="particle-panel-toggle" class="settings-toggle" aria-expanded="true" aria-controls="settings">Частицы <span aria-hidden="true">↗</span></button></div>
+<aside id="settings" class="settings" aria-label="Настройки частиц">
+ <div class="panel-heading"><h2>Выбрать плотность</h2><button id="particle-panel-close" aria-label="Закрыть настройки">×</button></div>
+ <section id="particle-controls" class="particle-controls" aria-label="Частицы жидкости"></section>
+</aside>
+<p id="playback-message" role="status" hidden></p>
+<button id="contact-toggle" class="contact-link" aria-expanded="false" aria-controls="contact-card"><span class="contact-sneak" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 3h-7L2 12l9 9h7l-9-9z"/><path d="m18 3-9 9 9 9V3" opacity=".55"/></svg></span><span class="contact-label"><span class="contact-word contact-word-current">Связаться</span><span class="contact-word contact-word-next" aria-hidden="true">Связаться</span></span></button>
+<aside id="contact-card" class="contact-card" aria-labelledby="contact-title" hidden><h2 id="contact-title" class="sr-only">Контакты Portnoy</h2><button id="contact-close" aria-label="Закрыть контакты">×</button><a href="https://t.me/portnoy_production" target="_blank" rel="noopener noreferrer">Telegram <span aria-hidden="true">↗</span></a><a href="mailto:info@portnoy.pro">info@portnoy.pro <span aria-hidden="true">↗</span></a></aside>
+<script src="shaders.js?v=release-sneaky-20261022"></script><script src="particles-engine.js?v=release-sneaky-20261022"></script><script type="module" src="ready.mjs?v=release-sneaky-20261022"></script>
+<script type="module" src="contact-preview.mjs?v=release-sneaky-20261022"></script>
+</body></html>

@@ -1,0 +1,30 @@
+/* Собственная версия Sneaky: текст сдвигается влево, справа выглядывает стрелка. */
+.contact-link{position:fixed;right:38px;bottom:30px;z-index:6;display:flex;align-items:center;justify-content:center;min-height:52px;min-width:182px;padding:14px 26px;border:0;border-radius:0;background:transparent;color:#e9e7e2;font-size:18px;font-weight:500;letter-spacing:-.025em;text-transform:uppercase;isolation:isolate;text-shadow:0 1px 12px #08080a}
+.contact-label{display:block;position:relative;perspective:240px;overflow:hidden;transition:transform .4s cubic-bezier(.25,.8,.25,1)}
+.contact-word{display:block;white-space:nowrap;transform-origin:left center;transition:transform .42s cubic-bezier(.25,.8,.25,1),opacity .32s;backface-visibility:hidden}
+.contact-word-next{position:absolute;inset:0;opacity:0;transform:translateX(100%) rotateY(78deg)}
+.contact-sneak{position:absolute;right:2px;top:50%;display:grid;place-items:center;width:22px;height:24px;opacity:0;transform:translate(24px,-50%) scaleX(1.6);transform-origin:left center;transition:transform .42s cubic-bezier(.25,.8,.25,1),opacity .24s;filter:drop-shadow(0 1px 4px #08080a)}
+.contact-sneak svg{width:22px;height:22px;fill:currentColor}
+.contact-link:is(:hover,:focus-visible,[aria-expanded=true]) .contact-label{transform:translateX(-8px)}
+.contact-link:is(:hover,:focus-visible,[aria-expanded=true]) .contact-word-current{transform:translateX(-100%) rotateY(-78deg);opacity:0}
+.contact-link:is(:hover,:focus-visible,[aria-expanded=true]) .contact-word-next{transform:translateX(0) rotateY(0);opacity:1}
+.contact-link:is(:hover,:focus-visible,[aria-expanded=true]) .contact-sneak{opacity:1;transform:translate(0,-50%) scaleX(1)}
+.contact-link:is(:hover,:focus-visible) .contact-sneak svg{animation:sneaky-peek 1s .42s ease-in-out infinite}
+@keyframes sneaky-peek{0%,100%{transform:translateX(0)}50%{transform:translateX(3px)}}
+.contact-card{position:fixed;right:38px;bottom:100px;z-index:6;width:280px;max-width:calc(100vw - 44px);padding:16px 0 0;border:0;border-top:1px solid #e9e7e255;background:transparent}
+.contact-card::before{content:'';position:absolute;inset:-50px -38px -30px -60px;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 80% 60%,#08080af5 10%,#08080ac7 50%,transparent 76%)}
+.contact-card a{display:flex;justify-content:space-between;align-items:center;min-height:52px;padding:12px 0;color:#e9e7e2;text-decoration:none;font-size:19px;letter-spacing:-.02em;transition:transform .25s,color .2s;text-shadow:0 1px 6px #08080a}
+.contact-card a span{color:#a8a69f;font-size:17px;transition:transform .25s,opacity .2s}
+.contact-card a:is(:hover,:focus-visible){color:#fff;transform:translateX(-5px)}
+.contact-card a:is(:hover,:focus-visible) span{transform:translate(2px,-2px)}
+.contact-card button{position:absolute;top:-48px;right:-11px;min-width:44px;min-height:44px;background:none;border:0;padding:8px;color:#c8c6be;font-size:23px}
+.contact-link:focus-visible,.contact-card a:focus-visible,.contact-card button:focus-visible{outline:1px solid #eee;outline-offset:5px}
+.contact-card:not([hidden]){animation:contact-in .3s cubic-bezier(.2,.8,.2,1)}
+.contact-card:not([hidden]) a{animation:contact-in .35s backwards}.contact-card:not([hidden]) a:last-child{animation-delay:.04s}
+.contact-bubble{position:fixed;left:0;top:0;width:38px;height:38px;z-index:10;pointer-events:none;opacity:0;transition:transform .12s ease-out,opacity .18s}
+.contact-bubble span{display:grid;place-items:center;width:100%;height:100%;border-radius:50%;background:#e9e7e2;color:#151517;font-size:22px;transform:scale(.6);transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.contact-bubble.is-visible{opacity:1}.contact-bubble.is-visible span{transform:scale(1)}
+@keyframes contact-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(hover:hover) and (pointer:fine){body[data-cursor="corners-soft"] #stage{cursor:url(assets/cursor-corners-soft.png) 12 12,crosshair}.contact-card.has-bubble a{cursor:none}.contact-card.has-bubble a:hover span{opacity:0}}
+@media(max-width:720px){.contact-link{right:22px;bottom:max(18px,env(safe-area-inset-bottom));min-width:166px;font-size:16px}.contact-card{right:22px;bottom:88px;width:240px}.contact-card a{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.contact-link,.contact-label,.contact-word,.contact-sneak,.contact-card a,.contact-card a span,.contact-bubble,.contact-bubble span{transition:none}.contact-card:not([hidden]),.contact-card:not([hidden]) a,.contact-link .contact-label::before,.contact-link .contact-label::after,.contact-link .contact-sneak svg{animation:none}}

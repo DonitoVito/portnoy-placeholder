@@ -1,0 +1,120 @@
+{
+  "version": "2026-10-22",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 4152,
+      "sha256": "4739a68d6b3c67c9e49617f892f245283963e5a766775fd0626a16dbba74adba"
+    },
+    {
+      "path": "approved-settings.json",
+      "bytes": 757,
+      "sha256": "23a518a6cfcbf60f7396688cf37220e088fc3158c323d65f210c2dd3d73d6c68"
+    },
+    {
+      "path": "assets/BasisGrotesquePro-Medium.ttf",
+      "bytes": 151344,
+      "sha256": "b1d6bf934e9536714c9dec218ff060678a57e457d23d40e7831d11a7a3d4d11b"
+    },
+    {
+      "path": "assets/BasisGrotesquePro-Regular.ttf",
+      "bytes": 151912,
+      "sha256": "5fe6034c1352a4ee5cbec6fb0eae96a7eb375be43989b5e586ba31ec2e9d2d85"
+    },
+    {
+      "path": "assets/cursor-corners-soft.png",
+      "bytes": 323,
+      "sha256": "ba8c9e39833dae379571eb500eaf8367932566a2f15cf0723cb681b7aab4c9fd"
+    },
+    {
+      "path": "assets/head.svg",
+      "bytes": 4069,
+      "sha256": "0c62619c248e78a57cfa17669430534111531befb0021116e6a3f188ba6177f8"
+    },
+    {
+      "path": "assets/portnoy-loop.mp4",
+      "bytes": 62146586,
+      "sha256": "6fbe3e77284ba4a3d7f69fcd04a0121b3daa9280d38ca1a1997ba170041f4fb7"
+    },
+    {
+      "path": "assets/production.svg",
+      "bytes": 8645,
+      "sha256": "bb4bdcffa5ac7ae4eadc08099132e1800f5ce71cac1f0dfc880d27b6b33e32bd"
+    },
+    {
+      "path": "assets/wordmark-top.png",
+      "bytes": 75770,
+      "sha256": "e72f32495dd03a5fe9416533632beedc344d88ebdcb82796fae0b03be91a3434"
+    },
+    {
+      "path": "assets/wordmark-top.svg",
+      "bytes": 11347,
+      "sha256": "121d1c21c6946a964bb23ac9d42280834ea6e97c2cc915b85af1221ee4dc9474"
+    },
+    {
+      "path": "brand-lockup.mjs",
+      "bytes": 965,
+      "sha256": "fe97b8e1e9cb8010df3542a5ac1a32c1c85c69b6ba77ef70eaf37485e802f40e"
+    },
+    {
+      "path": "contact-preview.css",
+      "bytes": 4702,
+      "sha256": "44fe2c83280f8a4c9cc4f573195aa763bd6ea08532bf2bbfecec48ee07c8d3df"
+    },
+    {
+      "path": "contact-preview.mjs",
+      "bytes": 2251,
+      "sha256": "b26b0b83f7af4a654d2bce57a0f70a667cc9c7c62f1b3276d4e239550a14eab5"
+    },
+    {
+      "path": "focus-lab-model.mjs",
+      "bytes": 3368,
+      "sha256": "a3b360d28760f5e716785ae052b8edb4c70af7a73f6fb85b587dbf17faace158"
+    },
+    {
+      "path": "focus-reticle.css",
+      "bytes": 1178,
+      "sha256": "5b6038afc0891e12023f88ef6edd85b1db1e9c68e3327bfac23fd7ad072a0e7e"
+    },
+    {
+      "path": "focus-reticle.mjs",
+      "bytes": 3304,
+      "sha256": "fe81f6779175328a25cb2d9bcd29cfd00814b5eb5b246a75336f2c31b0bf456b"
+    },
+    {
+      "path": "index.html",
+      "bytes": 2626,
+      "sha256": "2d2fa025750aca950803832d937b142a692f3590c12d18d628be4dda5352e8a4"
+    },
+    {
+      "path": "particle-settings.mjs",
+      "bytes": 4307,
+      "sha256": "205caf2bd440045c9ae99f62aab0b831792c0088a23f3b1a15ecb4dc755cc5c8"
+    },
+    {
+      "path": "particles-engine.js",
+      "bytes": 49195,
+      "sha256": "6edd86780b741e945913d7d040f7c76e73586de15072b5349579c0a0c63a9ae7"
+    },
+    {
+      "path": "particles.html",
+      "bytes": 3330,
+      "sha256": "b06a1d6769fc4fdc49e172918a0a19fe40a1e9765afd4d7163ff4ac45920bb2c"
+    },
+    {
+      "path": "ready.mjs",
+      "bytes": 4192,
+      "sha256": "e0347d834f2e17aca9fcd301f67bfca07915364e6274b061c2cbee32309682be"
+    },
+    {
+      "path": "shaders.js",
+      "bytes": 8651,
+      "sha256": "e613bc5b998b09d5f609cb0b7ad3897b1fa9e40bc43d7e6d3f6c7e8bdf745009"
+    },
+    {
+      "path": "style.css",
+      "bytes": 6949,
+      "sha256": "3035b1ee2120ead15f1959ac801a3c940225188e07a116bcd5801ded9374bf2f"
+    }
+  ]
+}
