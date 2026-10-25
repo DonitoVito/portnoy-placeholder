@@ -20,7 +20,8 @@ try{
   const reticle=new FocusReticle(document.querySelector('#focus-reticle'));
   reticle.configure(settings.reticle);
   engine=PortnoyParticles.create(document.querySelector('#scene'),{
-    video:settings.video,videoFrame:settings.videoFrame,
+    // Телефону и узкому экрану — ролик 1080p (10 МБ), десктопу — 4K; критерий тот же, что у движка.
+    video:(innerWidth<=720||/Mobi|Android/i.test(navigator.userAgent))&&settings.videoMobile?settings.videoMobile:settings.video,videoFrame:settings.videoFrame,
     focus,dark:settings.dark,autoParticles:false,
     onMarkLayout:branding.layout,
     onParticles:state=>{particleControls?.update(state);document.querySelector('#scene').dataset.particles=state.count;document.querySelector('#scene').dataset.particleSize=state.sizeRatio;},

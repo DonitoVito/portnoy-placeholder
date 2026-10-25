@@ -45,5 +45,6 @@
   "videoResolution": [
     3840,
     2160
-  ]
+  ],
+  "videoMobile": "assets/portnoy-loop-1080.mp4"
 }
