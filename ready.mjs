@@ -8,6 +8,7 @@ const branding=createBrandLockup();
 let engine;
 let particleControls;
 function fail(){
+  window.PORTNOY_PRELOADER?.fail();
   document.body.classList.remove('ready');
   message.textContent='Не удалось запустить эффект. Обнови страницу.';
   message.hidden=false;
@@ -28,8 +29,8 @@ try{
     onFocus:state=>reticle.update(state),onError:fail,
     onMedia:status=>{
       if(status==='error')fail();
-      if(status==='ready'){message.hidden=true;document.body.classList.add('ready');}
-      if(status==='blocked'){message.textContent='Коснись экрана, чтобы включить видео.';message.hidden=false;}
+      if(status==='ready'){message.hidden=true;document.body.classList.add('ready');window.PORTNOY_PRELOADER?.ready();}
+      if(status==='blocked'){message.textContent='Коснись экрана, чтобы включить видео.';message.hidden=false;window.PORTNOY_PRELOADER?.ready();}
     }
   });
   if(!engine)fail();

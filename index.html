@@ -6,14 +6,18 @@
 <link rel="stylesheet" href="style.css?v=release-sneaky-20261022"><link rel="stylesheet" href="focus-reticle.css?v=release-sneaky-20261022">
 <style>#playback-message{position:fixed;bottom:24px;left:20px;right:20px;text-align:center;color:#bbb;font:13px Arial;pointer-events:none}#stage:focus{outline:none}</style>
 <link rel="stylesheet" href="contact-preview.css?v=release-sneaky-20261022">
+<link rel="stylesheet" href="preloader.css?v=20261025">
+<style>.old-site{position:fixed;right:248px;bottom:30px;z-index:6;display:flex;align-items:center;min-height:52px;padding:14px 10px;color:#a8a69f;text-decoration:none;font:13px/1 Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;opacity:.75;transition:opacity .25s,color .25s}.old-site:is(:hover,:focus-visible){opacity:1;color:#e9e7e2;outline:0}.old-site span{margin-left:6px;font-size:12px}@media(max-width:720px){.old-site{right:auto;left:22px;bottom:max(18px,env(safe-area-inset-bottom));padding:14px 0;font-size:12px}}</style>
 </head><body class="dark" data-cursor="corners-soft">
 <main id="stage" tabindex="0" aria-label="Portnoy Production — интерактивная надпись">
 <h1 class="sr-only">Portnoy Production</h1><img class="fallback-word" src="assets/wordmark-top.svg" alt="" aria-hidden="true"><canvas id="scene" aria-hidden="true"></canvas>
 </main>
 <div id="focus-reticle" class="focus-reticle" aria-hidden="true" data-style="corners"><svg viewBox="0 0 100 100"><path class="corners" d="M12 32V12H32 M68 12H88V32 M88 68V88H68 M32 88H12V68"/></svg></div>
 <p id="playback-message" role="status" hidden></p>
+<a class="old-site" href="https://portnoy.pro/page32956649.html" target="_top" rel="noopener">Старый сайт<span aria-hidden="true">↗</span></a>
 <button id="contact-toggle" class="contact-link" aria-expanded="false" aria-controls="contact-card"><span class="contact-sneak" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M18 3h-7L2 12l9 9h7l-9-9z"/><path d="m18 3-9 9 9 9V3" opacity=".55"/></svg></span><span class="contact-label"><span class="contact-word contact-word-current">Связаться</span><span class="contact-word contact-word-next" aria-hidden="true">Связаться</span></span></button>
 <aside id="contact-card" class="contact-card" aria-labelledby="contact-title" hidden><h2 id="contact-title" class="sr-only">Контакты Portnoy</h2><button id="contact-close" aria-label="Закрыть контакты">×</button><a href="https://t.me/portnoy_production" target="_blank" rel="noopener noreferrer">Telegram <span aria-hidden="true">↗</span></a><a href="mailto:info@portnoy.pro">info@portnoy.pro <span aria-hidden="true">↗</span></a></aside>
+<script src="preloader.js?v=20261025"></script>
 <script src="shaders.js?v=release-sneaky-20261022"></script><script src="particles-engine.js?v=release-sneaky-20261022"></script><script type="module" src="ready.mjs?v=release-sneaky-20261022"></script>
 <script type="module" src="contact-preview.mjs?v=release-sneaky-20261022"></script>
 </body></html>

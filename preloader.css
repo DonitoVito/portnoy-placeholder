@@ -1,0 +1,12 @@
+/* Заставка по образцу прототипа Дениса: чёрное поле, обводка головы, волна заливки, подпись. */
+.preloader{position:fixed;inset:0;z-index:20;background:#000;color:#fff;display:grid;place-items:center;--progress:0;transition:opacity .3s ease;cursor:wait}
+.preloader.is-complete{opacity:0;pointer-events:none}
+.preloader-logo{position:relative;width:min(48vw,38vh,320px);transform-origin:center;will-change:transform}
+.preloader-logo svg{display:block;width:100%;height:auto;overflow:visible;transform-origin:50% 65%;animation:loading-head-sway 3s cubic-bezier(.37,0,.63,1) 1}
+.preloader.is-complete .preloader-logo svg{animation:none}
+.preloader-logo .preloader-contour{fill:none;stroke:#fff;stroke-width:1.25px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1000;stroke-dashoffset:1000}
+.preloader-logo .preloader-solid{fill:#fff;stroke:none;opacity:0;clip-path:url(#loading-wave)}
+.preloader-caption{position:absolute;bottom:max(9vh,40px);left:0;width:100%;text-align:center;font-size:clamp(12px,1.1vw,17px);letter-spacing:.06em;display:flex;justify-content:center;gap:clamp(1px,.3vw,5px)}
+.preloader-caption span{display:inline-block;width:.8em;transition:transform .16s ease-out,opacity .16s ease-out;font-variant-numeric:tabular-nums}
+@keyframes loading-head-sway{0%,100%{transform:rotate(0deg)}12.5%{transform:rotate(-3deg)}37.5%{transform:rotate(3deg)}62.5%{transform:rotate(-2.5deg)}87.5%{transform:rotate(1.5deg)}}
+@media(prefers-reduced-motion:reduce){.preloader{transition:opacity .15s}.preloader-logo{transform:none!important}.preloader-logo svg{animation:none;transform:none}}
